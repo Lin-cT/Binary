@@ -3,7 +3,6 @@ toc: True
 comments: True
 layout: post
 title: Binary to Colors
-description: Binary. to. Colors.
 courses: {'compsci': {'week': 7}}
 type: hacks
 permalink: "btc"
@@ -11,7 +10,6 @@ permalink: "btc"
 
 <head>
   <meta charset="UTF-8"> <!-- Declares the character set as UTF-8 -->
-  <title>Binary to Color Converter</title> <!-- Sets the title of the HTML document -->
   <style>
     body {
       display: flex; /* Uses flexbox for layout */

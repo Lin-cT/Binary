@@ -3,7 +3,6 @@ toc: True
 comments: True
 layout: post
 title: Letters to Binary
-description: Makes letters turn into binary
 courses: {'compsci': {'week': 7}}
 type: hacks
 permalink: "ltb"
@@ -12,57 +11,11 @@ permalink: "ltb"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letters to Binary Converter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <body style="background-color:lightsteelblue;">
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <h1>
-                <font size="50">Enter a Letter to Convert to Binary</font></h1>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
         <div style="text-align:center">
             <p>
                 Binary is used by a computer, and is made up of various sequences of zeros and ones.
@@ -77,17 +30,8 @@ permalink: "ltb"
                 This program will show you different letters as their binary counterparts.
             </p>
         </div>
-        <div style="text-align: center;">
-            <p>
-                <font color="lightsteelblue">divider</font> 
-            </p>
-        </div>
-        <div style="text-align: center;">
-            <div style="text-align: center;">
-                <p>
-                    <font color="lightsteelblue">divider</font> 
-                </p>
-            </div>
+<br>
+<br>
             <div style="text-align: center;">
                 <div style="text-align: center;">
                     <p>
@@ -114,5 +58,3 @@ permalink: "ltb"
                 }
         </script>
     </div>
-
-</body>
