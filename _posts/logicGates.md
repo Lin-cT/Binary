@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
+---
+toc: True
+comments: True
+layout: post
+title: Logic Gates 
+description: Door game
+courses: {'compsci': {'week': 7}}
+type: hacks
+permalink: "lg"
+---
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Remember to move the style into scss folder later */
-
-                /* Additional styles for positioning text paragraphs */
+        /* Additional styles for positioning text paragraphs */
         #t1,
         #t2 {
             text-align: center;
@@ -20,7 +26,6 @@
             justify-content: center;
             align-items: center;
         }
-
         /* Style for the door-lightbulb-container */
         .door-lightbulb-container {
             display: flex;
@@ -28,14 +33,12 @@
             align-items: center;
             margin-bottom: 20px; /* Add margin at the bottom */
         }
-
         .text-buttons {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 20px; /* Add margin at the bottom */
         }
-
         #lightbulb {
             width: 100px;
             height: 100px;
@@ -43,13 +46,11 @@
             background-image: url('off_lightbulb.png'); /* Replace with the path to your off lightbulb image */
             background-size: cover;
         }
-
         #door1 {
             width: 250px; /* Adjusted width to make it smaller */
             height: 550px; /* Adjusted height to make it smaller */
             margin: 20px;
         }
-
         /* Style for the button-container */
         .button-container {
             background-color: #f0f0f0; /* Lighter background color */
@@ -61,7 +62,6 @@
             align-items: center;
             margin-top: 20px; /* Adjusted margin between the two button containers */
         }
-
         /* Style for the buttons in the container */
         .button-container .my-button {
             width: 80px; /* Set the width of the buttons */
@@ -79,17 +79,14 @@
             justify-content: center; /* Center the content horizontally */
             align-items: center; /* Center the content vertically */
         }
-
         .button-container .my-button:hover {
             background-color: #808080; /* Darker grey background color on hover */
             color: #fff; /* White text color on hover */
         }
-
         .clicked {
             background-color: blue; /* Change color if clicked */
             color: white; /* Change text color if clicked */
         }
-
         /* Style for the buttons */
         .my-button {
             background-color: #808080; /* Grey background color */
@@ -112,7 +109,6 @@
             align-items: center;
             margin-top: 20px; /* Adjusted margin between the two button containers */
         }
-
         /* Style for the buttons in the container */
         .button-container2 .my-button {
             width: 80px; /* Set the width of the buttons */
@@ -130,24 +126,20 @@
             justify-content: center; /* Center the content horizontally */
             align-items: center; /* Center the content vertically */
         }
-
         .button-container2 .my-button:hover {
             background-color: #808080; /* Darker grey background color on hover */
             color: #fff; /* White text color on hover */
         }
-
         .button-container2 .centered-buttons .my-button {
             justify-content: center; /* Center the content horizontally */
             align-items: center; /* Center the content vertically */
         }
-
         /* Apply the new class to buttons 7 and 8 */
         #b7.centered-buttons,
         #b8.centered-buttons {
             justify-content: center; /* Center the content horizontally */
             align-items: center; /* Center the content vertically */
         }
-
         /* Style for the Check button */
         #check {
             padding: 20px; /* Increase padding for a larger button */
@@ -158,12 +150,10 @@
             cursor: pointer; /* Change cursor to pointer on hover */
             margin-top: 20px; /* Adjusted margin from the button container */
         }
-
         /* Style for the Check button on hover */
         #check:hover {
             background-color: #45a049; /* Darker green background color on hover */
         }
-
         #check2 {
             padding: 20px; /* Increase padding for a larger button */
             background-color: #4CAF50; /* Green background color */
@@ -173,12 +163,10 @@
             cursor: pointer; /* Change cursor to pointer on hover */
             margin-top: 20px; /* Adjusted margin from the button container */
         }
-
         /* Style for the Check button on hover */
         #check2:hover {
             background-color: #45a049; /* Darker green background color on hover */
         }
-
         #enter {
           padding: 20px; /* Increase padding for a larger button */
             background-color: #ca1fa5; /* Pink background color */
@@ -188,32 +176,26 @@
             cursor: pointer; /* Change cursor to pointer on hover */
             margin-top: 20px; /* Adjusted margin from the button container */
         }
-
         /* Style for the Enter button on hover */
         #enter:hover {
             background-color: #e925ae; /* Pinker background color on hover */
         }
-
         /* Style for the level-specific content */
         #level-container {
             text-align: center;
             display: none;
         }
-
         #level-container p {
             font-size: 18px;
             margin-bottom: 10px;
         }
-
         #level-container input {
             padding: 5px;
             margin-bottom: 10px;
         }
-
         #level-container button {
             font-size: 16px;
         }
-
         /* Style for the "and" and "or" images */
         #and,
         #or {
@@ -221,12 +203,10 @@
             height: 50px; /* Adjust the size as needed */
             margin-bottom: 10px; /* Add margin at the bottom */
         }
-
         /* Style for the paragraph text */
         .text-buttons p {
             font-weight: bold; /* Make the text bold */
         }
-
     </style>
 </head>
 
@@ -263,8 +243,6 @@
     </div>
   </body>
   <script>
-
-
   // Variable to keep track of the button value
   var button1Value = 0;
   var button2Value = 0;
@@ -274,69 +252,59 @@
   var button6Value = 0;
   var button7Value = 0;
   var button8Value = 0;
-
   // Function to toggle the button value
   function toggle1Value(button) {
     // Toggle between 0 and 1
     button1Value = 1 - button1Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle2Value(button) {
     // Toggle between 0 and 1
     button2Value = 1 - button2Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle3Value(button) {
     // Toggle between 0 and 1
     button3Value = 1 - button3Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle4Value(button) {
     // Toggle between 0 and 1
     button4Value = 1 - button4Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle5Value(button) {
     // Toggle between 0 and 1
     button5Value = 1 - button5Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle6Value(button) {
     // Toggle between 0 and 1
     button6Value = 1 - button6Value;
     changeColor(button);
   }
-
     // Function to toggle the button value
     function toggle7Value(button) {
     // Toggle between 0 and 1
     button7Value = 1 - button7Value;
     changeColor(button);
   }
-
   // Function to toggle the button value
   function toggle8Value(button) {
   // Toggle between 0 and 1
   button8Value = 1 - button8Value;
   changeColor(button);
   }
-
   function openDoor() {
     var doorImage = document.getElementById('door1')
     doorImage.src = 'door1_Open.png';
     doorImage.alt = 'Open Door';
   }
-
   function correctAnswer() {
     var correctAnswer = false
     if (button1Value === 1 && button5Value === 1 && button8Value === 1 || button7Value === 1) {
@@ -346,7 +314,6 @@
       return correctAnswer = false
     }
   }
-
   function correctAnswer2() {
     var correctAnswer = false
     if (button4Value !== 1 && ((button7Value === 1) !== (button8Value === 1))) {
@@ -357,7 +324,6 @@
       return correctAnswer = false
     }
   }
-
   function changeColor(button) {
     if (button.style.backgroundColor === 'blue') {
         button.style.backgroundColor = ''; // Reset to default color
@@ -366,38 +332,34 @@
     }
 }
 function checkAnswer() {
-            if (correctAnswer()) {
-                document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
-                openDoor();
-                alert("Correct! You can move on to the next level.");
-                document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
-            } else {
-                alert("Incorrect answer. Try again!");
-            }
-        }
-
+  if (correctAnswer()) {
+    document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
+    openDoor();
+    alert("Correct! You can move on to the next level.");
+    document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
+  } else {
+    alert("Incorrect answer. Try again!");
+  }
+}
 function checkAnswer2() {
   if (correctAnswer2()) {
     document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
     openDoor();
     alert("Correct! Congrats!");
-    } else {
+  } else {
       alert("Incorrect answer. Try again!");
     }
 }
-
 function clickEnter() {
     // Update questions and choices
     var andImage = document.getElementById('and');
     var orImage = document.getElementById('or');
     andImage.src = 'not.png'; // Replace with the path to your nor gate image
     orImage.src = 'xor.png'; // Replace with the path to your not gate image
-
     // Hide the "Enter" button after clicking
     document.getElementById('enter').style.display = 'none';
     document.getElementById('check').style.display = 'none';
     document.getElementById('check2').style.display = 'block';
-
     button1Value = 0;
     button2Value = 0;
     button3Value = 0;
@@ -406,7 +368,6 @@ function clickEnter() {
     button6Value = 0;
     button7Value = 0;
     button8Value = 0;
-    
     var b1 = document.getElementById("b1");
     var b2 = document.getElementById("b2");
     var b3 = document.getElementById("b3");
@@ -415,10 +376,8 @@ function clickEnter() {
     var b6 = document.getElementById("b6");
     var b7 = document.getElementById("b7");
     var b8 = document.getElementById("b8");
-
     var text1 = document.getElementById("text1");
     var text2 = document.getElementById("text2");
-
     text1.innerHTML = "Click on any button except the red button.";
     b1.innerHTML = "";
     b2.innerHTML = "";
@@ -426,22 +385,17 @@ function clickEnter() {
     b4.innerHTML = "";
     b5.innerHTML = "";
     b6.innerHTML = "";
-
     b1.style.backgroundColor = "";
     b2.style.backgroundColor = "";
     b3.style.backgroundColor = "";
     b4.style.backgroundColor = "red"; // Corrected property name
     b5.style.backgroundColor = "";
     b6.style.backgroundColor = "";
-
     text2.innerHTML = "You can click on one button, or the other, but not both!";
     b7.innerHTML = "Click me";
     b8.innerHTML = "Click ME!";
-
     b7.style.backgroundColor = "";
     b8.style.backgroundColor = "";
 }
  
 </script>
-</body>
-</html>
