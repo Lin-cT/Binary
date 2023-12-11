@@ -133,7 +133,7 @@ permalink: "lg"
             <div id="lightbulb"></div>
             <img src="door1.png" id="door1">
         </div>
-        <div class="text-buttons"">
+        <div class="text-buttons">
         <img src="and.png" id="and">
         <p id="t1">Which two numbers add up to 5?</p>
         <div class="button-container">
@@ -158,7 +158,6 @@ permalink: "lg"
         <button id="check" onclick="checkAnswer()">Check!</button>
         </div>
     </div>
-  </body>
   <script>
   //Variable to keep track of the button value
   var button1Value = 0;
