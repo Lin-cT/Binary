@@ -3,13 +3,61 @@ layout: default
 title: Student Blog
 ---
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Project</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
 
-## Build you Home Page here 
-This is about your journey. Start now!!!
+        h1 {
+            color: black;
+        }
 
-## Overview of Hacks, Study and Tangibles
-Blogging in GitHub pages is a way to learn and code at the same time. 
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-- Plans, Lists, [Scrum Boards](https://clickup.com/blog/scrum-board/) help you to track key events, show progress and record time.  Effort is a big part of your class grade.  Show plans and time spent!
-- [Hacks(Todo)](https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae) enable you to stay in focus with key requirements of the class.  Each Hack will produce Tangibles.
-- Tangibles or [Tangible Artifacts](https://en.wikipedia.org/wiki/Artifact_(software_development)) are things you accumulate as a learner and coder. 
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Binary Project</h1>
+    <div class="button-container">
+        <button onclick="navigate('https://lin-ct.github.io/binary/binary/logicGates.html')" class="button"><a href="https://lin-ct.github.io/binary/binary/logicGates.html"></a>Logic Gates</button>
+        <button href="#binary-to-color" class="button">Binary to Color Converter</button>
+        <button href="#letters-to-binary" class="button">Letters to Binary Converter</button>
+    </div>
+</body>
+<script>
+    function navigate(url) {
+        window.location.href = url;
+    }
+</script>

@@ -1,0 +1,81 @@
+---
+toc: True
+comments: True
+layout: post
+title: Binary to Colors
+description: Binary. to. Colors.
+courses: {'compsci': {'week': 7}}
+type: hacks
+permalink: "btc"
+---
+
+<head>
+  <meta charset="UTF-8"> <!-- Declares the character set as UTF-8 -->
+  <title>Binary to Color Converter</title> <!-- Sets the title of the HTML document -->
+  <style>
+    body {
+      display: flex; /* Uses flexbox for layout */
+      justify-content: center; /* Centers content horizontally */
+      align-items: center; /* Centers content vertically */
+      flex-direction: column; /* Aligns items in a column */
+      height: 100vh; /* Sets the body height to 100% of the viewport height */
+      margin: 0; /* Removes default margin */
+      background-color: #f0f0f0; /* Sets the initial background color */
+      font-family: Arial, sans-serif; /* Specifies the font family for text */
+    }
+    #converterContainer {
+      margin-bottom: 20px; /* Adds margin at the bottom of the converter container */
+      text-align: center; /* Aligns content in the center horizontally */
+    }
+    #binaryInput {
+      padding: 10px; /* Adds padding around the input field */
+      font-size: 16px; /* Sets the font size for the input field */
+      margin-bottom: 10px; /* Adds margin at the bottom of the input field */
+      width: 300px; /* Sets the width of the input field */
+    }
+    #convertButton {
+      padding: 10px 20px; /* Adds padding to the button */
+      font-size: 16px; /* Sets the font size for the button */
+      cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+    #userInputs {
+      text-align: center; /* Aligns content in the center horizontally */
+      margin-bottom: 20px; /* Adds margin at the bottom of the user inputs */
+    }
+    #userInputs h1,
+    #userInputs p {
+      margin-bottom: 10px; /* Adds margin at the bottom of the heading and paragraph */
+    }
+  </style>
+</head>
+<body>
+  <div id="userInputs">
+    <h1 id="title">Converting Binary Into Colors</h1> <!-- Represents the title -->
+    <p id="description">This is a program that allows you to convert any binary code into colors</p> <!-- Represents the description -->
+  </div>
+
+  <div id="converterContainer">
+    <input type="text" id="binaryInput" placeholder="Enter binary code"> <!-- Input field for entering binary code -->
+    <button id="convertButton">Convert</button> <!-- Button to trigger the conversion -->
+  </div>
+
+  <script>
+    // JavaScript code for handling the binary input and changing the background color
+    function convertBinaryToColor() {
+      const binaryInput = document.getElementById('binaryInput').value;
+
+      // Check if the input is a valid binary number
+      if (/^[01]+$/.test(binaryInput)) {
+        const decimalValue = parseInt(binaryInput, 2);
+        const hexColor = decimalValue.toString(16).padStart(6, '0'); // Convert to hexadecimal
+
+        document.body.style.backgroundColor = `#${hexColor}`; // Changes the background color of the body
+      } else {
+        alert('Please enter a valid binary number (0s and 1s only).'); // Alert for invalid input
+      }
+    }
+
+    const convertButton = document.getElementById('convertButton');
+    convertButton.addEventListener('click', convertBinaryToColor); // Adds event listener for the "Convert" button
+  </script>
+</body>
