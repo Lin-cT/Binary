@@ -80,7 +80,7 @@ permalink: "lg"
             align-items: center; /* Center the content vertically */
         }
         .button-container .my-button:hover {
-            background-color: #808080; /* Darker grey background color on hover */
+            background-color: #606060; /* Darker grey background color on hover */
             color: #fff; /* White text color on hover */
         }
         .clicked {
@@ -89,7 +89,7 @@ permalink: "lg"
         }
         /* Style for the buttons */
         .my-button {
-            background-color: #808080; /* Grey background color */
+            background-color: #d3d3d3; /* Lighter grey background color */
             color: #000; /* Black text color */
             padding: 16px; /* Increase padding inside the button */
             border: 2px solid black; /* Black border */
@@ -126,7 +126,6 @@ permalink: "lg"
         }
     </style>
 </head>
-
 <body>
     <div class="main-container">
         <div class="door-lightbulb-container">

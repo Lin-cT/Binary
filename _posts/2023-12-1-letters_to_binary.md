@@ -7,7 +7,6 @@ courses: {'compsci': {'week': 7}}
 type: hacks
 permalink: "ltb"
 ---
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,7 @@ permalink: "ltb"
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body style="background-color:lightsteelblue;">
+    <body>
         <div style="text-align:center">
             <p>
                 Binary is used by a computer, and is made up of various sequences of zeros and ones.
@@ -30,21 +29,12 @@ permalink: "ltb"
                 This program will show you different letters as their binary counterparts.
             </p>
         </div>
-<br>
-<br>
-            <div style="text-align: center;">
-                <div style="text-align: center;">
-                    <p>
-                        <font color="lightsteelblue">divider</font> 
-                    </p>
-                </div>
-        <div style="text-align: center;">
-        <input type="text" style="height:50px; width:200px;" id="letterInput" placeholder="Enter a letter" maxlength="1">
-        <button onclick="convertToBinary()">
-            <font size="5">Convert</font>
-        </button>
+        <div id="converterContainer">
+        <input type="text" id="binaryInput" placeholder="Enter a letter" maxlength="1">
+        <button id="convertButton">Convert</button>
         <font size="6"> <p id="binaryOutput"></p> </font>
         <p id="binaryOutput"></p>
+        </div>
         <script>
             function convertToBinary() {
                 var letter = document.getElementById('letterInput').value;
