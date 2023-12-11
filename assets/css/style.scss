@@ -98,3 +98,199 @@ body {
     }
   }
 }
+
+//From here on out, this is gonna be styling for the Logic Gates file
+
+#t1,
+        #t2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        /* Style for the main container */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Style for the door-lightbulb-container */
+        .door-lightbulb-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+        .text-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+        #lightbulb {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-image: url('off_lightbulb.png'); /* Replace with the path to your off lightbulb image */
+            background-size: cover;
+        }
+        #door1 {
+            width: 250px; /* Adjusted width to make it smaller */
+            height: 550px; /* Adjusted height to make it smaller */
+            margin: 20px;
+        }
+        /* Style for the button-container */
+        .button-container {
+            background-color: #f0f0f0; /* Lighter background color */
+            border: 2px solid #999; /* Lighter border color */
+            padding: 15px; /* Increased padding around the buttons */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            gap: 12px; /* Increased gap between buttons */
+            align-items: center;
+            margin-top: 20px; /* Adjusted margin between the two button containers */
+        }
+        /* Style for the buttons in the container */
+        .button-container .my-button {
+            width: 80px; /* Set the width of the buttons */
+            height: 50px; /* Set the height of the buttons */
+            background-color: #808080; /* Grey background color */
+            color: #000; /* Black text color */
+            padding: 16px; /* Increase padding inside the button */
+            border: 2px solid black; /* Black border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-bottom: 8px; /* Adjusted margin between buttons */
+            position: relative; /* Add this line to enable z-index */
+            z-index: 1; /* Add this line to control the stacking order */
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        .button-container .my-button:hover {
+            background-color: #808080; /* Darker grey background color on hover */
+            color: #fff; /* White text color on hover */
+        }
+        .clicked {
+            background-color: blue; /* Change color if clicked */
+            color: white; /* Change text color if clicked */
+        }
+        /* Style for the buttons */
+        .my-button {
+            background-color: #808080; /* Grey background color */
+            color: #000; /* Black text color */
+            padding: 16px; /* Increase padding inside the button */
+            border: 2px solid black; /* Black border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-bottom: 8px; /* Adjusted margin between buttons */
+            position: relative; /* Add this line to enable z-index */
+            z-index: 1; /* Add this line to control the stacking order */
+        }
+        .button-container2 {
+            background-color: #f0f0f0; /* Lighter background color */
+            border: 2px solid #999; /* Lighter border color */
+            padding: 15px; /* Increased padding around the buttons */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Three columns */
+            gap: 12px; /* Increased gap between buttons */
+            align-items: center;
+            margin-top: 20px; /* Adjusted margin between the two button containers */
+        }
+        /* Style for the buttons in the container */
+        .button-container2 .my-button {
+            width: 80px; /* Set the width of the buttons */
+            height: 50px; /* Set the height of the buttons */
+            background-color: #808080; /* Grey background color */
+            color: #000; /* Black text color */
+            padding: 16px; /* Increase padding inside the button */
+            border: 2px solid black; /* Black border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-bottom: 8px; /* Adjusted margin between buttons */
+            position: relative; /* Add this line to enable z-index */
+            z-index: 1; /* Add this line to control the stacking order */
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        .button-container2 .my-button:hover {
+            background-color: #808080; /* Darker grey background color on hover */
+            color: #fff; /* White text color on hover */
+        }
+        .button-container2 .centered-buttons .my-button {
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        /* Apply the new class to buttons 7 and 8 */
+        #b7.centered-buttons,
+        #b8.centered-buttons {
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        /* Style for the Check button */
+        #check {
+            padding: 20px; /* Increase padding for a larger button */
+            background-color: #4CAF50; /* Green background color */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-top: 20px; /* Adjusted margin from the button container */
+        }
+        /* Style for the Check button on hover */
+        #check:hover {
+            background-color: #45a049; /* Darker green background color on hover */
+        }
+        #check2 {
+            padding: 20px; /* Increase padding for a larger button */
+            background-color: #4CAF50; /* Green background color */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-top: 20px; /* Adjusted margin from the button container */
+        }
+        /* Style for the Check button on hover */
+        #check2:hover {
+            background-color: #45a049; /* Darker green background color on hover */
+        }
+        #enter {
+          padding: 20px; /* Increase padding for a larger button */
+            background-color: #ca1fa5; /* Pink background color */
+            color: white; /* White text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Optional: Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin-top: 20px; /* Adjusted margin from the button container */
+        }
+        /* Style for the Enter button on hover */
+        #enter:hover {
+            background-color: #e925ae; /* Pinker background color on hover */
+        }
+        /* Style for the level-specific content */
+        #level-container {
+            text-align: center;
+            display: none;
+        }
+        #level-container p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        #level-container input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #level-container button {
+            font-size: 16px;
+        }
+        /* Style for the "and" and "or" images */
+        #and,
+        #or {
+            width: 60px; /* Adjust the size as needed */
+            height: 50px; /* Adjust the size as needed */
+            margin-bottom: 10px; /* Add margin at the bottom */
+        }
+        /* Style for the paragraph text */
+        .text-buttons p {
+            font-weight: bold; /* Make the text bold */
+        }

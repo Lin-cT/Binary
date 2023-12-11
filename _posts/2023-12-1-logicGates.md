@@ -11,121 +11,8 @@ permalink: "lg"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Remember to move the style into scss folder later */
-        /* Additional styles for positioning text paragraphs */
-        #t1,
-        #t2 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        /* Style for the main container */
-        .main-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /* Style for the door-lightbulb-container */
-        .door-lightbulb-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px; /* Add margin at the bottom */
-        }
-        .text-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px; /* Add margin at the bottom */
-        }
-        #lightbulb {
-            width: 100px;
-            height: 100px;
-            margin: 20px;
-            background-image: url('off_lightbulb.png'); /* Replace with the path to your off lightbulb image */
-            background-size: cover;
-        }
-        #door1 {
-            width: 250px; /* Adjusted width to make it smaller */
-            height: 550px; /* Adjusted height to make it smaller */
-            margin: 20px;
-        }
-        /* Style for the button-container */
-        .button-container {
-            background-color: #f0f0f0; /* Lighter background color */
-            border: 2px solid #999; /* Lighter border color */
-            padding: 15px; /* Increased padding around the buttons */
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three columns */
-            gap: 12px; /* Increased gap between buttons */
-            align-items: center;
-            margin-top: 20px; /* Adjusted margin between the two button containers */
-        }
-        /* Style for the buttons in the container */
-        .button-container .my-button {
-            width: 80px; /* Set the width of the buttons */
-            height: 50px; /* Set the height of the buttons */
-            background-color: #808080; /* Grey background color */
-            color: #000; /* Black text color */
-            padding: 16px; /* Increase padding inside the button */
-            border: 2px solid black; /* Black border */
-            border-radius: 4px; /* Optional: Add rounded corners */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            margin-bottom: 8px; /* Adjusted margin between buttons */
-            position: relative; /* Add this line to enable z-index */
-            z-index: 1; /* Add this line to control the stacking order */
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-        }
-        .button-container .my-button:hover {
-            background-color: #606060; /* Darker grey background color on hover */
-            color: #fff; /* White text color on hover */
-        }
-        .clicked {
-            background-color: blue; /* Change color if clicked */
-            color: white; /* Change text color if clicked */
-        }
-        /* Style for the buttons */
-        .my-button {
-            background-color: #d3d3d3; /* Lighter grey background color */
-            color: #000; /* Black text color */
-            padding: 16px; /* Increase padding inside the button */
-            border: 2px solid black; /* Black border */
-            border-radius: 4px; /* Optional: Add rounded corners */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            margin-bottom: 8px; /* Adjusted margin between buttons */
-            position: relative; /* Add this line to enable z-index */
-            z-index: 1; /* Add this line to control the stacking order */
-        }
-        /* Style for the Check button */
-        #check {
-            padding: 20px; /* Increase padding for a larger button */
-            background-color: #4CAF50; /* Green background color */
-            color: white; /* White text color */
-            border: none; /* No border */
-            border-radius: 4px; /* Optional: Add rounded corners */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            margin-top: 20px; /* Adjusted margin from the button container */
-        }
-        /* Style for the Check button on hover */
-        #check:hover {
-            background-color: #45a049; /* Darker green background color on hover */
-        }
-        /* Style for the "and" and "or" images */
-        #and,
-        #or {
-            width: 60px; /* Adjust the size as needed */
-            height: 50px; /* Adjust the size as needed */
-            margin-bottom: 10px; /* Add margin at the bottom */
-        }
-        /* Style for the paragraph text */
-        .text-buttons p {
-            font-weight: bold; /* Make the text bold */
-        }
-    </style>
 </head>
+
 <body>
     <div class="main-container">
         <div class="door-lightbulb-container">
@@ -134,7 +21,7 @@ permalink: "lg"
         </div>
         <div class="text-buttons">
         <img src="and.png" id="and">
-        <p id="t1">Which two numbers add up to 5?</p>
+        <p id="text1">Which two numbers add up to 5?</p>
         <div class="button-container">
           <button class="my-button" id="b1" onclick="toggle1Value(this);">2</button>
           <button class="my-button" id="b2" onclick="toggle2Value(this);">8</button>
@@ -145,20 +32,21 @@ permalink: "lg"
         </div>
         <br>
         <img src="or.png" id="or">
-        <p id="t2">Which word is a synonym to the word "binary"?</p>
-        <div class="button-container">
-          <button class="my-button" id="b7" onclick="toggle7Value(this);">One</button>
+        <p id="text2">Which word is a synonym to the word "binary"?</p>
+        <div class="button-container2">
+          <button class="my-button" id="b7" onclick="toggle7Value(this);">Pair</button>
           <button class="my-button" id="b8" onclick="toggle8Value(this);">Dual</button>
-          <button class="my-button" id="b9" onclick="toggle9Value(this);">Careful</button>
-          <button class="my-button" id="b10" onclick="toggle10Value(this);">Utterance</button>
-          <button class="my-button" id="b11" onclick="toggle11Value(this);">Paired</button>
-          <button class="my-button" id="b12" onclick="toggle12Value(this);">Zero</button>
         </div>
         <button id="check" onclick="checkAnswer()">Check!</button>
-        </div>
+        <button id="enter" onclick="clickEnter()" style="display: none;">Enter!</button>
+        <button id="check2" onclick="checkAnswer2()" style="display: none;">Check!</button>
+      </div>
     </div>
+    <div id="level-container">
+    </div>
+  </body>
   <script>
-  //Variable to keep track of the button value
+  // Variable to keep track of the button value
   var button1Value = 0;
   var button2Value = 0;
   var button3Value = 0;
@@ -167,10 +55,6 @@ permalink: "lg"
   var button6Value = 0;
   var button7Value = 0;
   var button8Value = 0;
-  var button9Value = 0;
-  var button10Value = 0;
-  var button11Value = 0;
-  var button12Value = 0;
   // Function to toggle the button value
   function toggle1Value(button) {
     // Toggle between 0 and 1
@@ -219,30 +103,6 @@ permalink: "lg"
   button8Value = 1 - button8Value;
   changeColor(button);
   }
-  // Function to toggle the button value
-  function toggle9Value(button) {
-  // Toggle between 0 and 1
-  button9Value = 1 - button9Value;
-  changeColor(button);
-  }
-  // Function to toggle the button value
-  function toggle10Value(button) {
-  // Toggle between 0 and 1
-  button10Value = 1 - button10Value;
-  changeColor(button);
-  }
-  // Function to toggle the button value
-  function toggle11Value(button) {
-  // Toggle between 0 and 1
-  button11Value = 1 - button11Value;
-  changeColor(button);
-  }
-  // Function to toggle the button value
-  function toggle12Value(button) {
-  // Toggle between 0 and 1
-  button12Value = 1 - button12Value;
-  changeColor(button);
-  }
   function openDoor() {
     var doorImage = document.getElementById('door1')
     doorImage.src = 'door1_Open.png';
@@ -250,19 +110,21 @@ permalink: "lg"
   }
   function correctAnswer() {
     var correctAnswer = false
-    if (button1Value === 1 && button5Value === 1 && button8Value === 1 || button11Value === 1) {
+    if (button1Value === 1 && button5Value === 1 && button8Value === 1 || button7Value === 1) {
       return correctAnswer = true
     }
     else {
       return correctAnswer = false
     }
   }
-  function checkAnswer(isCorrect) {
-    if (correctAnswer() === true) {
-      document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')"; /* Replace with the path to your on lightbulb image */
-      openDoor();
-    } else {
-      alert("Incorrect answer. Try again!");
+  function correctAnswer2() {
+    var correctAnswer = false
+    if (button4Value !== 1 && ((button7Value === 1) !== (button8Value === 1))) {
+      correctAnswer = true;
+      return correctAnswer = true
+    }
+    else {
+      return correctAnswer = false
     }
   }
   function changeColor(button) {
@@ -272,15 +134,71 @@ permalink: "lg"
         button.style.backgroundColor = 'blue';
     }
 }
-  function checkAnswer() {
-    if (correctAnswer()) {
-        document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
-        openDoor();
-        alert("Correct! You can move on to the next level.");
-        // Add code here to proceed to the next level if needed
-    } else {
-        alert("Incorrect answer. Try again!");
+function checkAnswer() {
+  if (correctAnswer()) {
+    document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
+    openDoor();
+    alert("Correct! You can move on to the next level.");
+    document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
+  } else {
+    alert("Incorrect answer. Try again!");
+  }
+}
+function checkAnswer2() {
+  if (correctAnswer2()) {
+    document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
+    openDoor();
+    alert("Correct! Congrats!");
+  } else {
+      alert("Incorrect answer. Try again!");
     }
 }
+function clickEnter() {
+    // Update questions and choices
+    var andImage = document.getElementById('and');
+    var orImage = document.getElementById('or');
+    andImage.src = 'not.png'; // Replace with the path to your nor gate image
+    orImage.src = 'xor.png'; // Replace with the path to your not gate image
+    // Hide the "Enter" button after clicking
+    document.getElementById('enter').style.display = 'none';
+    document.getElementById('check').style.display = 'none';
+    document.getElementById('check2').style.display = 'block';
+    button1Value = 0;
+    button2Value = 0;
+    button3Value = 0;
+    button4Value = 0;
+    button5Value = 0;
+    button6Value = 0;
+    button7Value = 0;
+    button8Value = 0;
+    var b1 = document.getElementById("b1");
+    var b2 = document.getElementById("b2");
+    var b3 = document.getElementById("b3");
+    var b4 = document.getElementById("b4");
+    var b5 = document.getElementById("b5");
+    var b6 = document.getElementById("b6");
+    var b7 = document.getElementById("b7");
+    var b8 = document.getElementById("b8");
+    var text1 = document.getElementById("text1");
+    var text2 = document.getElementById("text2");
+    text1.innerHTML = "Click on any button except the red button.";
+    b1.innerHTML = "";
+    b2.innerHTML = "";
+    b3.innerHTML = "";
+    b4.innerHTML = "";
+    b5.innerHTML = "";
+    b6.innerHTML = "";
+    b1.style.backgroundColor = "";
+    b2.style.backgroundColor = "";
+    b3.style.backgroundColor = "";
+    b4.style.backgroundColor = "red"; // Corrected property name
+    b5.style.backgroundColor = "";
+    b6.style.backgroundColor = "";
+    text2.innerHTML = "You can click on one button, or the other, but not both!";
+    b7.innerHTML = "Click me";
+    b8.innerHTML = "Click ME!";
+    b7.style.backgroundColor = "";
+    b8.style.backgroundColor = "";
+}
+ 
 </script>
-</body>
