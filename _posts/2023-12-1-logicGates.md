@@ -155,8 +155,10 @@ function checkAnswer2() {
 }
 function clickEnter() {
     // Update questions and choices
+    var door = document.getElementById('door1')
     var andImage = document.getElementById('and');
     var orImage = document.getElementById('or');
+    door.src = 'door1.png';
     andImage.src = 'not.png'; // Replace with the path to your nor gate image
     orImage.src = 'xor.png'; // Replace with the path to your not gate image
     // Hide the "Enter" button after clicking
