@@ -22,7 +22,7 @@ permalink: "lg"
         <div class="text-buttons">
         <img src="and.png" id="and">
         <p id="text1">Click on button 1 AND button 2.</p>
-        <div class="button-container">
+        <div class="button-container2">
           <button class="my-button" id="b1" onclick="toggle1Value(this);">1</button>
           <button class="my-button" id="b2" onclick="toggle2Value(this);">2</button>
         </div>
@@ -126,6 +126,7 @@ function clickEnter() {
     var door = document.getElementById('door1')
     var andImage = document.getElementById('and');
     var orImage = document.getElementById('or');
+    document.getElementById('lightbulb').style.backgroundImage = "url('off_lightbulb.png')";
     door.src = 'door1.png';
     andImage.src = 'not.png'; // Replace with the path to your nor gate image
     orImage.src = 'xor.png'; // Replace with the path to your not gate image
