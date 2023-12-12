@@ -21,12 +21,12 @@ permalink: "ltb"
             </p>
         <div style="text-align:center">
             <p>
-                Different sequences of binary can represent letters.
+                Different sequences of binary can represent letters. ASCII converts the letters into binary. 
             </p>
             </div>
         <div style="text-align:center">
             <p>
-                This program will show you different letters as their binary counterparts.
+                ASCII assigns a unique binary code to each character, allowing computers to process and store text. For example, the letter 'A' corresponds to the binary representation 01000001. This binary conversion enables computers to manipulate and convey textual information through a standardized digital language, showcasing the integral role of binary code in handling letters and text in the digital world.
             </p>
         </div>
         <div id="converterContainer">

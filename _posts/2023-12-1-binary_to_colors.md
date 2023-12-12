@@ -3,6 +3,7 @@ toc: True
 comments: True
 layout: post
 title: Binary to Colors
+description: This is a program that allows you to convert any binary code into colors.
 courses: {'compsci': {'week': 7}}
 type: hacks
 permalink: "btc"
@@ -14,7 +15,7 @@ permalink: "btc"
 <body>
   <div id="userInputs">
     <h1 id="title">Converting Binary Into Colors</h1> <!-- Represents the title -->
-    <p id="description">This is a program that allows you to convert any binary code into colors</p> <!-- Represents the description -->
+    <p id="description">Binary code, consisting of 0s and 1s, serves as the fundamental language of computers. In the RGB color model, colors like red are represented by values ranging from 0 to 255, with each component expressed in binary. For example, if the red component is 255, its binary representation is 11111111, while 0 is represented as 00000000. The combination of binary values for red, green, and blue components forms the binary representation of a color, illustrating the essential link between binary code and the digital representation of colors in computing.</p>
   </div>
 
   <div id="converterContainer">
