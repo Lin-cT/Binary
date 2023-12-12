@@ -3,7 +3,7 @@ toc: True
 comments: True
 layout: post
 title: Logic Gates 
-description: This door game employs logic gates to teach about binary. Above the keypads, there are hints on what button to click, and also the logical operator the keypad is using. When a button is clicked, the assigned value (the default assigned value is 0) becomes 1. Using the hints, determine if 
+description: This door game employs logic gates to teach about binary. Above the keypads, there are hints on what button to click, and also the logical operator the keypad is using. When a button is clicked, the assigned value (the default assigned value is 0) becomes 1. Using the hints, determine what value the buttons must have (0 or 1) in order to fufill the requirements for each keypad and pass to the next level. 
 courses: {'compsci': {'week': 7}}
 type: hacks
 permalink: "lg"
