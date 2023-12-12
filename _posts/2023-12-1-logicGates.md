@@ -87,7 +87,7 @@ permalink: "lg"
   }
   function correctAnswer2() {
     var correctAnswer = false
-    if (button4Value !== 1 && ((button7Value === 1) !== (button8Value === 1))) {
+    if (button1Value !== 1 && ((button7Value === 1) !== (button8Value === 1))) {
       correctAnswer = true;
       return correctAnswer = true
     }
