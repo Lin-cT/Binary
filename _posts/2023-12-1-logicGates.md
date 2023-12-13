@@ -16,7 +16,7 @@ permalink: "lg"
 <body>
     <div class="main-container">
         <div class="door-lightbulb-container">
-            <div id="lightbulb"></div>
+            <img src="on_lightbulb.png" id="lightbulb"></img>
             <img src="door1.png" id="door1">
         </div>
         <div class="text-buttons">
@@ -102,9 +102,16 @@ permalink: "lg"
         button.style.backgroundColor = 'blue';
     }
 }
+function changeColor1(button) {
+    if (button.style.backgroundColor === 'blue') {
+        button.style.backgroundColor = 'red'; // Reset to default color
+    } else {
+        button.style.backgroundColor = 'blue';
+    }
 function checkAnswer() {
   if (correctAnswer()) {
-    document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
+    var lightbulb = document.getElementById('lightbulb')
+    src.lightbulb = 'on_lightbulb.png'
     openDoor();
     alert("Correct! You can move on to the next level.");
     document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
@@ -126,8 +133,9 @@ function clickEnter() {
     var door = document.getElementById('door1')
     var andImage = document.getElementById('and');
     var orImage = document.getElementById('or');
-    document.getElementById('lightbulb').style.backgroundImage = "url('off_lightbulb.png')";
+    var lightbulb = document.getElementById('lightbulb')
     door.src = 'door1.png';
+    lightbulb.src = 'off_lightbulb.png';
     andImage.src = 'not.png'; // Replace with the path to your nor gate image
     orImage.src = 'xor.png'; // Replace with the path to your not gate image
     // Hide the "Enter" button after clicking
@@ -144,8 +152,8 @@ function clickEnter() {
     var b8 = document.getElementById("b8");
     var text1 = document.getElementById("text1");
     var text2 = document.getElementById("text2");
-    text1.innerHTML = "Click on the button that is NOT the red button.";
-    b1.style.backgroundColor = "red";
+    text1.innerHTML = "Do NOT click on the 1st button.";
+    b1.style.backgroundColor = "";
     b2.style.backgroundColor = "";
     text2.innerHTML = "Click on button 1 OR button 2, but NOT both!";
     b7.innerHTML = "1";
