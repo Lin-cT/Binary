@@ -97,17 +97,11 @@ permalink: "lg"
   }
   function changeColor(button) {
     if (button.style.backgroundColor === 'blue') {
-        button.style.backgroundColor = ''; // Reset to default color
+        button.style.backgroundColor = '#808080'; // Reset to default color
     } else {
         button.style.backgroundColor = 'blue';
     }
 }
-function changeColor1(button) {
-    if (button.style.backgroundColor === 'blue') {
-        button.style.backgroundColor = 'red'; // Reset to default color
-    } else {
-        button.style.backgroundColor = 'blue';
-    }
 function checkAnswer() {
   if (correctAnswer()) {
     var lightbulb = document.getElementById('lightbulb')
