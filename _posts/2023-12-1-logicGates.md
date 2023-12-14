@@ -95,13 +95,13 @@ permalink: "lg"
       return correctAnswer = false
     }
   }
-  function changeColor(button) {
+function changeColor(button) {
+    var defaultColor = '#808080'; // Replace with the default color of your buttons
     if (button.style.backgroundColor === 'blue') {
-        button.style.backgroundColor = '#808080'; // Reset to default color
+        button.style.backgroundColor = defaultColor; // Reset to default color
     } else {
         button.style.backgroundColor = 'blue';
     }
-}
 function checkAnswer() {
   if (correctAnswer()) {
     var lightbulb = document.getElementById('lightbulb')
