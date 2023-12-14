@@ -16,7 +16,7 @@ permalink: "lg"
 <body>
     <div class="main-container">
         <div class="door-lightbulb-container">
-            <img src="on_lightbulb.png" id="lightbulb"></img>
+            <img src="off_lightbulb.png" id="lightbulb">
             <img src="door1.png" id="door1">
         </div>
         <div class="text-buttons">
