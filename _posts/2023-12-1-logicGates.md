@@ -60,16 +60,16 @@ permalink: "lg"
     changeColor(button);
   }
     // Function to toggle the button value
-    function toggle7Value(button) {
+  function toggle7Value(button) {
     // Toggle between 0 and 1
     button7Value = 1 - button7Value;
     changeColor(button);
   }
   // Function to toggle the button value
   function toggle8Value(button) {
-  // Toggle between 0 and 1
-  button8Value = 1 - button8Value;
-  changeColor(button);
+    // Toggle between 0 and 1
+    button8Value = 1 - button8Value;
+    changeColor(button);
   }
   function openDoor() {
     var doorImage = document.getElementById('door1')
@@ -102,20 +102,22 @@ function changeColor(button) {
     } else {
         button.style.backgroundColor = 'blue';
     }
+}
 function checkAnswer() {
-  if (correctAnswer()) {
-    var lightbulb = document.getElementById('lightbulb')
-    src.lightbulb = 'on_lightbulb.png'
-    openDoor();
-    alert("Correct! You can move on to the next level.");
-    document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
-  } else {
-    alert("Incorrect answer. Try again!");
-  }
+    if (correctAnswer()) {
+        var lightbulb = document.getElementById('lightbulb');
+        lightbulb.src = 'on_lightbulb.png'; // Fix the line
+        openDoor();
+        alert("Correct! You can move on to the next level.");
+        document.getElementById('enter').style.display = 'block'; // Show the "Enter" button
+    } else {
+        alert("Incorrect answer. Try again!");
+    }
 }
 function checkAnswer2() {
   if (correctAnswer2()) {
-    document.getElementById('lightbulb').style.backgroundImage = "url('on_lightbulb.png')";
+    var lightbulb = document.getElementById('lightbulb')
+    lightbulb.src = 'on_lightbulb.png';
     openDoor();
     alert("Correct! Congrats!");
   } else {
@@ -155,5 +157,5 @@ function clickEnter() {
     b7.style.backgroundColor = "";
     b8.style.backgroundColor = "";
 }
- 
+
 </script>
